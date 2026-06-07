@@ -3,7 +3,7 @@
   const DS = window.LAPayrollDesignSystem_59f88b;
   const { Button } = DS;
   const api = window.LuaAPI;
-  const { DEV_PHONE, DEV_PHONE_TEL } = window.LuaUtils;
+  const { DevCredit } = window.LuaShared;
 
   const CSS = `
   .lw-login { min-height: 100vh; display: flex; align-items: center; justify-content: center; background: var(--surface-page); padding: 24px; }
@@ -68,9 +68,7 @@
             Tài khoản demo:<br />
             admin / admin123 · ketoan / ketoan123 · quanly / quanly123
           </div>
-          <p className="lw-login__dev">
-            Dev by H2T - Hải Lê | <a href={`tel:${DEV_PHONE_TEL}`}>{DEV_PHONE}</a>
-          </p>
+          <DevCredit className="lw-login__dev" />
         </div>
       </div>
     );

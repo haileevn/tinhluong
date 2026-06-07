@@ -353,7 +353,10 @@ Tất cả endpoint (trừ login) yêu cầu JWT trong header: `Authorization: B
 
 ## Nhà phát triển
 
-**Dev by H2T - Hải Lê | [0937.777.791](tel:0937777791)**
+**Dev by [H2T.life](https://h2t.life) - Hải Lê | 0937.777.791**
+
+- Website: [https://h2t.life](https://h2t.life)
+- Liên hệ: [0937.777.791](tel:0937777791)
 
 ---
 

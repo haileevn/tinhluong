@@ -50,13 +50,16 @@
     return false;
   }
 
-  const DEV_CREDIT = 'Dev by H2T - Hải Lê | 0937.777.791';
+  const DEV_NAME = 'Hải Lê';
   const DEV_PHONE = '0937.777.791';
   const DEV_PHONE_TEL = '0937777791';
+  const DEV_SITE = 'H2T.life';
+  const DEV_URL = 'https://h2t.life';
+  const DEV_CREDIT = `Dev by ${DEV_SITE} - ${DEV_NAME} | ${DEV_PHONE}`;
 
   window.LuaUtils = {
     SALARY_TYPE_LABEL, LEAVE_TYPE_LABEL, STATUS_LABEL, PAYROLL_STATUS_MAP, ROLE_LABEL,
     fmtMoney, fmtDate, toISO, periodLabel, currentPeriod, canAccess, canWrite,
-    DEV_CREDIT, DEV_PHONE, DEV_PHONE_TEL,
+    DEV_NAME, DEV_PHONE, DEV_PHONE_TEL, DEV_SITE, DEV_URL, DEV_CREDIT,
   };
 })();

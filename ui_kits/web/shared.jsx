@@ -209,10 +209,10 @@
   }
 
   function DevCredit({ className = 'lw-dev' }) {
-    const { DEV_CREDIT, DEV_PHONE, DEV_PHONE_TEL } = window.LuaUtils;
+    const { DEV_SITE, DEV_URL, DEV_NAME, DEV_PHONE, DEV_PHONE_TEL } = window.LuaUtils;
     return (
       <p className={className}>
-        Dev by H2T - Hải Lê | <a href={`tel:${DEV_PHONE_TEL}`}>{DEV_PHONE}</a>
+        Dev by <a href={DEV_URL} target="_blank" rel="noopener noreferrer">{DEV_SITE}</a> - {DEV_NAME} | <a href={`tel:${DEV_PHONE_TEL}`}>{DEV_PHONE}</a>
       </p>
     );
   }

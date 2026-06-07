@@ -34,5 +34,9 @@ Base: `/api/portal` (cần JWT)
 
 ## Files
 
-- `api.js`, `login.jsx`, `screens.jsx`, `app.jsx`, `index.html`
+- `api.js`, `dev.jsx`, `login.jsx`, `screens.jsx`, `app.jsx`, `index.html`
 - `data.js` — mock cũ (không dùng khi chạy qua server)
+
+---
+
+**Dev by [H2T.life](https://h2t.life) - Hải Lê | 0937.777.791**

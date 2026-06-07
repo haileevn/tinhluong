@@ -3,7 +3,7 @@
   const { LoginScreen, HomeScreen, PayslipScreen, AdvanceScreen, LeaveScreen } = window.OmMobile;
   const { Icon, Button } = window.LAPayrollDesignSystem_59f88b;
   const api = window.OmAPI;
-  const { DEV_PHONE, DEV_PHONE_TEL } = api;
+  const { DevCredit } = window.OmMobile;
 
   const CSS = `
   .om-app { min-height: 100vh; min-height: 100dvh; display: flex; flex-direction: column; background: var(--surface-page); }
@@ -70,9 +70,7 @@
           <Button size="sm" variant="ghost" onClick={() => { api.clearAuth(); setUser(null); }}>Thoát</Button>
         </header>
         <main className="om-app__body" key={tab}>{screen}</main>
-        <p className="om-dev">
-          Dev by H2T - Hải Lê | <a href={`tel:${DEV_PHONE_TEL}`}>{DEV_PHONE}</a>
-        </p>
+        <DevCredit />
         <nav className="om-tabs">
           {TABS.map((t) => (
             <button key={t.key} className="om-tab" data-on={tab === t.key} onClick={() => go(t.key)}>

@@ -2,7 +2,8 @@
 (function () {
   const DS = window.LAPayrollDesignSystem_59f88b;
   const { Icon, Avatar, IconButton, Badge, Button } = DS;
-  const { canAccess, ROLE_LABEL, DEV_PHONE, DEV_PHONE_TEL } = window.LuaUtils;
+  const { canAccess, ROLE_LABEL } = window.LuaUtils;
+  const { DevCredit } = window.LuaShared;
   const api = window.LuaAPI;
 
   const CSS = `
@@ -104,9 +105,7 @@
             <Button size="sm" variant="ghost" style={{ width: '100%', marginTop: 8 }} onClick={() => { api.clearAuth(); window.dispatchEvent(new Event('lua:logout')); }}>
               Đăng xuất
             </Button>
-            <p className="lw-side__dev">
-              Dev by H2T - Hải Lê | <a href={`tel:${DEV_PHONE_TEL}`}>{DEV_PHONE}</a>
-            </p>
+            <DevCredit className="lw-side__dev" />
           </div>
         </aside>
       </>

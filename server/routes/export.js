@@ -3,7 +3,7 @@ const jwt = require('jsonwebtoken');
 const XLSX = require('xlsx');
 const PDFDocument = require('pdfkit');
 const { getDb, getSettings } = require('../db');
-const { DEV_CREDIT } = require('../constants');
+const { DEV_CREDIT, DEV_CREDIT_HTML } = require('../constants');
 const { requirePermission, JWT_SECRET, hasPermission } = require('../middleware/auth');
 
 const router = express.Router();
@@ -156,7 +156,7 @@ router.get('/payslip/:year/:month/:employeeId', authExport, (req, res) => {
 </table>
 <p>Trạng thái: ${item.status === 'paid' ? 'Đã trả' : item.status === 'locked' ? 'Đã chốt' : 'Chưa chốt'}</p>
 <button onclick="window.print()">In phiếu lương</button>
-<p class="dev">${DEV_CREDIT}</p>
+<p class="dev">${DEV_CREDIT_HTML}</p>
 </body></html>`);
 });
 

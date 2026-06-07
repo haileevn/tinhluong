@@ -3,7 +3,7 @@
   const DS = window.LAPayrollDesignSystem_59f88b;
   const { Button } = DS;
   const api = window.OmAPI;
-  const { DEV_PHONE, DEV_PHONE_TEL } = api;
+  const { DevCredit } = window.OmMobile;
 
   const CSS = `
   .om-login { min-height: 100vh; min-height: 100dvh; display: flex; flex-direction: column; justify-content: center; padding: 24px; background: var(--surface-page); }
@@ -68,9 +68,7 @@
         <div className="om-login__hint">
           Demo: nvanan / nv123456<br />lequan / nv123456 · vulan / nv123456
         </div>
-        <p className="om-dev">
-          Dev by H2T - Hải Lê | <a href={`tel:${DEV_PHONE_TEL}`}>{DEV_PHONE}</a>
-        </p>
+        <DevCredit />
       </div>
     );
   }
