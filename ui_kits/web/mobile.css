@@ -1,0 +1,115 @@
+/* Ông Mập — responsive overrides (admin app) */
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+#root {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+@media (max-width: 900px) {
+  :root {
+    --page-pad: var(--space-4);
+  }
+
+  .lw-shell {
+    min-width: 0 !important;
+    width: 100% !important;
+    max-width: 100vw !important;
+  }
+
+  .lw-payday__amt {
+    font-size: clamp(1.5rem, 8vw, var(--text-4xl)) !important;
+    word-break: break-word;
+  }
+
+  .lw-pagehead {
+    flex-direction: column;
+    align-items: stretch !important;
+  }
+
+  .lw-pagehead > div:last-child {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+    width: 100%;
+  }
+
+  .lw-filters {
+    width: 100%;
+  }
+
+  .lw-filters input,
+  .lw-filters select {
+    flex: 1;
+    min-width: 120px;
+  }
+
+  .lw-period-sel {
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .lw-period-sel select {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .lw-tablewrap {
+    margin: 0 calc(-1 * var(--space-2));
+    padding: 0 var(--space-2);
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .lw-vgrid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .lw-adv {
+    flex-direction: column;
+    align-items: stretch !important;
+  }
+
+  .lw-adv__amt {
+    text-align: left !important;
+  }
+
+  .lw-modal {
+    padding: var(--space-5);
+    margin: 0;
+    max-height: 85dvh;
+  }
+
+  .lw-form input,
+  .lw-form select,
+  .lw-form textarea,
+  .lw-login input {
+    font-size: 16px; /* tránh zoom iOS */
+  }
+
+  .lw-form__actions {
+    flex-direction: column-reverse;
+  }
+
+  .lw-form__actions button {
+    width: 100%;
+  }
+
+  .lua-card__head {
+    flex-direction: column;
+    align-items: flex-start !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .lw-grid4 {
+    grid-template-columns: 1fr !important;
+  }
+
+  .lw-login__card {
+    padding: var(--space-5) !important;
+  }
+}

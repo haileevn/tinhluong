@@ -1,0 +1,30 @@
+<!-- @dsCard group="Type" viewport="700x230" name="Mono & money — JetBrains Mono" subtitle="Tabular figures for amounts, payslips, codes" -->
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin:0; font-family:var(--font-sans); background:var(--surface-card); padding:var(--space-6) var(--space-7); color:var(--text-body); }
+  .eyebrow { font-size:var(--text-2xs); letter-spacing:var(--tracking-caps); text-transform:uppercase; color:var(--text-subtle); font-weight:var(--weight-semibold); margin-bottom:var(--space-3); }
+  table { width:100%; border-collapse:collapse; font-family:var(--font-mono); font-feature-settings:var(--num-feature); }
+  td { padding:var(--space-1-5) 0; font-size:var(--text-sm); border-bottom:1px solid var(--border-subtle); }
+  td.amt { text-align:right; font-weight:var(--weight-medium); color:var(--text-strong); }
+  .pos { color:var(--money-positive); }
+  .neg { color:var(--money-negative); }
+  .label-cell { font-family:var(--font-sans); color:var(--text-muted); }
+  tr.total td { border-bottom:none; padding-top:var(--space-3); font-size:var(--text-md); font-weight:var(--weight-bold); color:var(--text-strong); }
+  tr.total .amt { color:var(--accent-hover); }
+</style>
+</head>
+<body>
+  <div class="eyebrow">Mono · JetBrains Mono · tabular</div>
+  <table>
+    <tr><td class="label-cell">Lương cơ bản</td><td class="amt pos">+18.000.000</td></tr>
+    <tr><td class="label-cell">Phụ cấp</td><td class="amt pos">+2.500.000</td></tr>
+    <tr><td class="label-cell">BHXH (10.5%)</td><td class="amt neg">−1.890.000</td></tr>
+    <tr><td class="label-cell">Tạm ứng kỳ trước</td><td class="amt neg">−3.000.000</td></tr>
+    <tr class="total"><td>Lương thực nhận</td><td class="amt">15.610.000 ₫</td></tr>
+  </table>
+</body>
+</html>

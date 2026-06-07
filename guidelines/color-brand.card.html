@@ -1,0 +1,60 @@
+<!-- @dsCard group="Colors" viewport="700x200" name="Brand & accent" subtitle="Paddy green primary, harvest gold accent" -->
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin:0; font-family:var(--font-sans); background:var(--surface-card); padding:var(--space-6); color:var(--text-body); }
+  .row { display:flex; gap:var(--space-4); }
+  .group { flex:1; }
+  .ramp { display:flex; border-radius:var(--radius-md); overflow:hidden; box-shadow:var(--shadow-sm); }
+  .ramp > div { flex:1; height:44px; }
+  .lead { display:flex; align-items:center; gap:var(--space-3); margin-bottom:var(--space-3); }
+  .chip { width:40px; height:40px; border-radius:var(--radius-md); box-shadow:var(--shadow-sm); }
+  .name { font-weight:var(--weight-bold); font-size:var(--text-sm); color:var(--text-strong); }
+  .meta { font-family:var(--font-mono); font-size:var(--text-2xs); color:var(--text-muted); }
+  .label { font-size:var(--text-2xs); color:var(--text-subtle); margin-top:var(--space-2); display:flex; justify-content:space-between; font-family:var(--font-mono); }
+</style>
+</head>
+<body>
+  <div class="row">
+    <div class="group">
+      <div class="lead">
+        <div class="chip" style="background:var(--brand)"></div>
+        <div>
+          <div class="name">Paddy green — Brand</div>
+          <div class="meta">--brand · green-600</div>
+        </div>
+      </div>
+      <div class="ramp">
+        <div style="background:var(--green-100)"></div>
+        <div style="background:var(--green-300)"></div>
+        <div style="background:var(--green-500)"></div>
+        <div style="background:var(--green-600)"></div>
+        <div style="background:var(--green-700)"></div>
+        <div style="background:var(--green-900)"></div>
+      </div>
+      <div class="label"><span>100</span><span>300</span><span>500</span><span>600</span><span>700</span><span>900</span></div>
+    </div>
+    <div class="group">
+      <div class="lead">
+        <div class="chip" style="background:var(--accent)"></div>
+        <div>
+          <div class="name">Harvest gold — Accent</div>
+          <div class="meta">--accent · gold-500</div>
+        </div>
+      </div>
+      <div class="ramp">
+        <div style="background:var(--gold-100)"></div>
+        <div style="background:var(--gold-300)"></div>
+        <div style="background:var(--gold-500)"></div>
+        <div style="background:var(--gold-600)"></div>
+        <div style="background:var(--gold-700)"></div>
+        <div style="background:var(--gold-900)"></div>
+      </div>
+      <div class="label"><span>100</span><span>300</span><span>500</span><span>600</span><span>700</span><span>900</span></div>
+    </div>
+  </div>
+</body>
+</html>

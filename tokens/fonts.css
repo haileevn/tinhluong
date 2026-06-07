@@ -1,0 +1,16 @@
+/* ============================================================
+   Lúa — Webfonts
+   ------------------------------------------------------------
+   Be Vietnam Pro  → workhorse UI + body. Purpose-built for
+                     Vietnamese diacritics (đ, ư, ơ, stacked tones).
+   Sora            → display headings + brand voice (geometric).
+   JetBrains Mono  → monetary figures, codes, tabular data.
+
+   NOTE: Fonts are loaded from the Google Fonts CDN rather than
+   self-hosted binaries. The @import below pulls in the real
+   @font-face declarations (with vietnamese subsets). If you need
+   fully offline/self-hosted binaries, drop the .woff2 files into
+   assets/fonts/ and replace this import with local @font-face rules.
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&family=Sora:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap');

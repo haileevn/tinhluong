@@ -1,0 +1,72 @@
+<!-- @dsCard group="Components" viewport="700x560" name="Payroll — status, money, payslip" subtitle="StatusPill · AmountDisplay · StatCard · ProgressMeter · PayslipLine" -->
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../../styles.css">
+<script src="https://unpkg.com/lucide@latest"></script>
+<style>
+  body { margin:0; font-family:var(--font-sans); background:var(--surface-page); padding:var(--space-6); color:var(--text-body); }
+  .sect { font-size:var(--text-2xs); letter-spacing:var(--tracking-caps); text-transform:uppercase; color:var(--text-subtle); font-weight:var(--weight-semibold); margin:0 0 var(--space-3); }
+  .block { background:var(--surface-card); border:1px solid var(--border-subtle); border-radius:var(--radius-lg); padding:var(--space-5); margin-bottom:var(--space-4); }
+  .row { display:flex; gap:var(--space-3); align-items:center; flex-wrap:wrap; }
+  .grid3 { display:grid; grid-template-columns:repeat(3,1fr); gap:var(--space-4); margin-bottom:var(--space-4); }
+  .meters { display:flex; flex-direction:column; gap:var(--space-4); }
+  .amts { display:flex; gap:var(--space-6); align-items:baseline; flex-wrap:wrap; }
+</style>
+</head>
+<body>
+  <div id="root"></div>
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+  <script src="../../_ds_bundle.js"></script>
+  <script type="text/babel">
+    const { StatusPill, AmountDisplay, StatCard, ProgressMeter, PayslipLine, Card } = window.LAPayrollDesignSystem_59f88b;
+    function Demo() {
+      return (
+        <React.Fragment>
+          <p className="sect">StatusPill · AmountDisplay</p>
+          <div className="block">
+            <div className="row" style={{marginBottom:'var(--space-4)'}}>
+              <StatusPill status="paid" /><StatusPill status="pending" />
+              <StatusPill status="approved" /><StatusPill status="overdue" />
+              <StatusPill status="processing" /><StatusPill status="draft" />
+            </div>
+            <div className="amts">
+              <AmountDisplay value={24500000} size="xl" tone="accent" />
+              <AmountDisplay value={2500000} signed size="md" />
+              <AmountDisplay value={-1890000} signed size="md" />
+              <AmountDisplay value={742500000} compact size="md" />
+            </div>
+          </div>
+
+          <p className="sect">StatCard</p>
+          <div className="grid3">
+            <StatCard icon="wallet" label="Quỹ lương T6" value={<AmountDisplay value={742500000} size="lg" />} delta="+4,2%" trend="up" footnote="vs T5" />
+            <StatCard icon="hand-coins" iconTone="accent" label="Ứng lương" value="12" delta="3 chờ duyệt" trend="flat" />
+            <StatCard icon="calendar-days" iconTone="info" label="Nghỉ phép" value="48 ngày" delta="−6" trend="down" footnote="tháng này" />
+          </div>
+
+          <p className="sect">ProgressMeter</p>
+          <div className="block meters">
+            <ProgressMeter label="Hạn mức ứng tháng này" value={3000000} max={9000000} valueText="3.000.000 / 9.000.000 ₫" footnote="Còn lại 6.000.000 ₫" />
+            <ProgressMeter label="Phép năm đã dùng" value={9} max={12} valueText="9 / 12 ngày" />
+            <ProgressMeter label="Ngân sách thưởng" value={47} max={50} valueText="47 / 50 tr" />
+          </div>
+
+          <p className="sect">PayslipLine</p>
+          <Card title="Phiếu lương — Tháng 6/2026" subtitle="Nguyễn Văn An · NV-0142">
+            <PayslipLine label="Lương cơ bản" amount={18000000} />
+            <PayslipLine label="Phụ cấp ăn trưa &amp; đi lại" amount={2500000} />
+            <PayslipLine label="BHXH" note="10,5% lương cơ bản" amount={-1890000} />
+            <PayslipLine label="Tạm ứng kỳ trước" amount={-3000000} />
+            <PayslipLine label="Lương thực nhận" amount={15610000} variant="total" />
+          </Card>
+        </React.Fragment>
+      );
+    }
+    ReactDOM.createRoot(document.getElementById('root')).render(<Demo />);
+  </script>
+</body>
+</html>

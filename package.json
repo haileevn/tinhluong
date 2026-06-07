@@ -1,0 +1,23 @@
+{
+  "name": "ong-map-payroll",
+  "version": "1.1.0",
+  "description": "Ông Mập by H2T — Hệ thống quản lý lương cho quán/doanh nghiệp nhỏ",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "node --watch server/index.js",
+    "seed": "node server/seed.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "better-sqlite3": "^11.7.0",
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "jsonwebtoken": "^9.0.2",
+    "pdfkit": "^0.15.2",
+    "xlsx": "^0.18.5"
+  }
+}

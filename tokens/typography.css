@@ -1,0 +1,62 @@
+/* ============================================================
+   Lúa — Typography tokens
+   ------------------------------------------------------------
+   Display  : Sora        (headings, hero numbers, brand voice)
+   Sans     : Be Vietnam Pro (UI, body, labels — VN-native)
+   Mono     : JetBrains Mono (money amounts, codes, tabular data)
+
+   Money & figures ALWAYS use tabular figures so columns align.
+   ============================================================ */
+
+:root {
+  /* ---- Families ------------------------------------------- */
+  --font-display: 'Sora', 'Be Vietnam Pro', system-ui, sans-serif;
+  --font-sans:    'Be Vietnam Pro', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-mono:    'JetBrains Mono', ui-monospace, 'SFMono-Regular', monospace;
+
+  /* ---- Weights -------------------------------------------- */
+  --weight-regular:  400;
+  --weight-medium:   500;
+  --weight-semibold: 600;
+  --weight-bold:     700;
+  --weight-extra:    800;
+
+  /* ---- Type scale (1.20 minor-third-ish, tuned) ----------- */
+  --text-2xs:  0.6875rem;  /* 11px — micro labels, table meta */
+  --text-xs:   0.75rem;    /* 12px — captions, helper text    */
+  --text-sm:   0.8125rem;  /* 13px — dense UI, table cells    */
+  --text-base: 0.9375rem;  /* 15px — default body             */
+  --text-md:   1rem;       /* 16px — comfortable body         */
+  --text-lg:   1.125rem;   /* 18px — lead, card titles        */
+  --text-xl:   1.375rem;   /* 22px — section titles           */
+  --text-2xl:  1.75rem;    /* 28px — page titles              */
+  --text-3xl:  2.25rem;    /* 36px — display                  */
+  --text-4xl:  3rem;       /* 48px — hero numbers             */
+  --text-5xl:  4rem;       /* 64px — marketing hero           */
+
+  /* ---- Line heights --------------------------------------- */
+  --leading-tight:   1.15;
+  --leading-snug:    1.3;
+  --leading-normal:  1.5;
+  --leading-relaxed: 1.65;
+
+  /* ---- Letter spacing ------------------------------------- */
+  --tracking-tighter: -0.02em;
+  --tracking-tight:   -0.012em;
+  --tracking-normal:  0em;
+  --tracking-wide:    0.02em;
+  --tracking-caps:    0.06em;  /* uppercase eyebrows/labels */
+
+  /* ---- Numeric / money helper ----------------------------- */
+  --num-feature: "tnum" 1, "lnum" 1; /* @kind other */ /* tabular + lining figures */
+}
+
+/* Global default — components can opt out */
+:root {
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  line-height: var(--leading-normal);
+  color: var(--text-body);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}

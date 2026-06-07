@@ -1,0 +1,40 @@
+<!-- @dsCard group="Brand" viewport="700x220" name="Logo & wordmark" subtitle="Mark + Lúa wordmark, light and dark lockups" -->
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin:0; font-family:var(--font-sans); background:var(--surface-card); padding:0; color:var(--text-body); }
+  .wrap { display:grid; grid-template-columns:1fr 1fr; height:220px; }
+  .panel { display:flex; flex-direction:column; align-items:center; justify-content:center; gap:var(--space-3); }
+  .dark { background:var(--green-900); }
+  .lockup { display:flex; align-items:center; gap:var(--space-3); }
+  .lockup img { width:48px; height:48px; }
+  .word { font-family:var(--font-display); font-size:42px; font-weight:var(--weight-extra); letter-spacing:-0.02em; }
+  .word .dot { color:var(--accent); }
+  .tag { font-size:var(--text-xs); color:var(--text-muted); letter-spacing:var(--tracking-wide); }
+  .tag.on-dark { color:var(--green-200); }
+  .word.light { color:var(--text-strong); }
+  .word.ondark { color:var(--neutral-50); }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="panel">
+      <div class="lockup">
+        <img src="../assets/lua-mark.svg" alt="Lúa">
+        <span class="word light">Lúa<span class="dot">.</span></span>
+      </div>
+      <div class="tag">Trả lương đúng, ứng lương dễ</div>
+    </div>
+    <div class="panel dark">
+      <div class="lockup">
+        <img src="../assets/lua-mark.svg" alt="Lúa">
+        <span class="word ondark">Lúa<span class="dot">.</span></span>
+      </div>
+      <div class="tag on-dark">Trả lương đúng, ứng lương dễ</div>
+    </div>
+  </div>
+</body>
+</html>

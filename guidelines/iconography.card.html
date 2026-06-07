@@ -1,0 +1,37 @@
+<!-- @dsCard group="Brand" viewport="700x210" name="Iconography — Lucide" subtitle="2px stroke outline icons, currentColor, payroll vocabulary" -->
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin:0; font-family:var(--font-sans); background:var(--surface-card); padding:var(--space-6) var(--space-7); color:var(--text-body); }
+  .grid { display:grid; grid-template-columns:repeat(7,1fr); gap:var(--space-4) var(--space-3); }
+  .cell { display:flex; flex-direction:column; align-items:center; gap:var(--space-2); text-align:center; }
+  .ic { width:44px; height:44px; border-radius:var(--radius-md); display:flex; align-items:center; justify-content:center; background:var(--surface-sunken); color:var(--text-muted); }
+  .ic.brand { background:var(--brand-subtle); color:var(--brand); }
+  .ic svg { width:22px; height:22px; }
+  .lbl { font-size:var(--text-2xs); color:var(--text-subtle); }
+</style>
+</head>
+<body>
+  <div class="grid">
+    <div class="cell"><div class="ic brand"><i data-lucide="wallet"></i></div><div class="lbl">lương</div></div>
+    <div class="cell"><div class="ic"><i data-lucide="hand-coins"></i></div><div class="lbl">ứng lương</div></div>
+    <div class="cell"><div class="ic"><i data-lucide="calendar-days"></i></div><div class="lbl">nghỉ phép</div></div>
+    <div class="cell"><div class="ic"><i data-lucide="receipt"></i></div><div class="lbl">phiếu lương</div></div>
+    <div class="cell"><div class="ic"><i data-lucide="file-text"></i></div><div class="lbl">bảng lương</div></div>
+    <div class="cell"><div class="ic"><i data-lucide="users"></i></div><div class="lbl">nhân viên</div></div>
+    <div class="cell"><div class="ic"><i data-lucide="landmark"></i></div><div class="lbl">BHXH</div></div>
+    <div class="cell"><div class="ic"><i data-lucide="trending-up"></i></div><div class="lbl">phụ cấp</div></div>
+    <div class="cell"><div class="ic"><i data-lucide="circle-minus"></i></div><div class="lbl">khấu trừ</div></div>
+    <div class="cell"><div class="ic"><i data-lucide="clock"></i></div><div class="lbl">chấm công</div></div>
+    <div class="cell"><div class="ic"><i data-lucide="check-circle-2"></i></div><div class="lbl">đã duyệt</div></div>
+    <div class="cell"><div class="ic"><i data-lucide="bell"></i></div><div class="lbl">thông báo</div></div>
+    <div class="cell"><div class="ic"><i data-lucide="download"></i></div><div class="lbl">tải về</div></div>
+    <div class="cell"><div class="ic"><i data-lucide="settings"></i></div><div class="lbl">cài đặt</div></div>
+  </div>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>lucide.createIcons();</script>
+</body>
+</html>

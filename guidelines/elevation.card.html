@@ -1,0 +1,25 @@
+<!-- @dsCard group="Spacing" viewport="700x190" name="Elevation / shadows" subtitle="Neutral-tinted, soft, layered — xs → xl" -->
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin:0; font-family:var(--font-sans); background:var(--surface-page); padding:var(--space-8) var(--space-7); color:var(--text-body); }
+  .row { display:flex; gap:var(--space-6); align-items:center; justify-content:space-between; }
+  .item { text-align:center; }
+  .box { width:84px; height:60px; background:var(--surface-card); border-radius:var(--radius-md); }
+  .t { font-family:var(--font-mono); font-size:var(--text-2xs); color:var(--text-muted); margin-top:var(--space-3); }
+</style>
+</head>
+<body>
+  <div class="row">
+    <div class="item"><div class="box" style="box-shadow:var(--shadow-xs)"></div><div class="t">xs</div></div>
+    <div class="item"><div class="box" style="box-shadow:var(--shadow-sm)"></div><div class="t">sm</div></div>
+    <div class="item"><div class="box" style="box-shadow:var(--shadow-md)"></div><div class="t">md</div></div>
+    <div class="item"><div class="box" style="box-shadow:var(--shadow-lg)"></div><div class="t">lg</div></div>
+    <div class="item"><div class="box" style="box-shadow:var(--shadow-xl)"></div><div class="t">xl</div></div>
+    <div class="item"><div class="box" style="box-shadow:var(--shadow-inset);background:var(--surface-sunken)"></div><div class="t">inset</div></div>
+  </div>
+</body>
+</html>

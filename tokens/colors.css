@@ -1,0 +1,131 @@
+/* ============================================================
+   Lúa — Color tokens
+   ------------------------------------------------------------
+   Concept: "Lúa" (rice / money slang in Vietnamese).
+   Paddy GREEN = growth, trust, the brand.
+   Harvest GOLD = money, payday, the accent.
+   Warm-tinted neutrals keep the system human, not clinical.
+   All colors authored in OKLCH for perceptual evenness.
+   ============================================================ */
+
+:root {
+  /* ---- Brand / Primary : paddy green ---------------------- */
+  --green-50:  oklch(0.972 0.020 165);
+  --green-100: oklch(0.940 0.040 165);
+  --green-200: oklch(0.885 0.068 165);
+  --green-300: oklch(0.805 0.098 165);
+  --green-400: oklch(0.705 0.128 165);
+  --green-500: oklch(0.612 0.140 164);
+  --green-600: oklch(0.525 0.128 165);  /* primary */
+  --green-700: oklch(0.445 0.108 166);
+  --green-800: oklch(0.365 0.086 168);
+  --green-900: oklch(0.288 0.062 170);
+  --green-950: oklch(0.220 0.044 172);
+
+  /* ---- Accent : harvest gold ------------------------------ */
+  --gold-50:  oklch(0.975 0.028 85);
+  --gold-100: oklch(0.948 0.055 84);
+  --gold-200: oklch(0.905 0.095 83);
+  --gold-300: oklch(0.858 0.125 82);
+  --gold-400: oklch(0.808 0.148 80);
+  --gold-500: oklch(0.768 0.158 76);   /* accent */
+  --gold-600: oklch(0.688 0.150 66);
+  --gold-700: oklch(0.585 0.130 56);
+  --gold-800: oklch(0.482 0.102 50);
+  --gold-900: oklch(0.388 0.080 46);
+
+  /* ---- Neutrals : warm slate (slight green-yellow tint) --- */
+  --neutral-0:   oklch(1 0 0);
+  --neutral-50:  oklch(0.986 0.003 120);
+  --neutral-100: oklch(0.972 0.004 120);
+  --neutral-150: oklch(0.952 0.005 120);
+  --neutral-200: oklch(0.924 0.006 125);
+  --neutral-300: oklch(0.872 0.007 128);
+  --neutral-400: oklch(0.715 0.009 130);
+  --neutral-500: oklch(0.582 0.010 132);
+  --neutral-600: oklch(0.472 0.010 138);
+  --neutral-700: oklch(0.382 0.009 144);
+  --neutral-800: oklch(0.272 0.008 150);
+  --neutral-900: oklch(0.205 0.007 156);
+  --neutral-950: oklch(0.152 0.006 162);
+
+  /* ---- Semantic hues -------------------------------------- */
+  --success-50:  oklch(0.962 0.030 150);
+  --success-100: oklch(0.918 0.060 150);
+  --success-500: oklch(0.628 0.150 150);
+  --success-600: oklch(0.545 0.130 150);
+  --success-700: oklch(0.455 0.105 151);
+
+  --warning-50:  oklch(0.972 0.034 85);
+  --warning-100: oklch(0.935 0.070 84);
+  --warning-500: oklch(0.795 0.150 78);
+  --warning-600: oklch(0.715 0.145 66);
+  --warning-700: oklch(0.585 0.125 56);
+
+  --danger-50:  oklch(0.965 0.018 25);
+  --danger-100: oklch(0.918 0.040 25);
+  --danger-500: oklch(0.620 0.205 25);
+  --danger-600: oklch(0.552 0.198 26);
+  --danger-700: oklch(0.470 0.168 27);
+
+  --info-50:  oklch(0.964 0.020 245);
+  --info-100: oklch(0.918 0.045 245);
+  --info-500: oklch(0.605 0.135 245);
+  --info-600: oklch(0.530 0.135 248);
+  --info-700: oklch(0.452 0.118 250);
+
+  /* ========================================================
+     Semantic aliases — reference these in components
+     ======================================================== */
+
+  /* Brand */
+  --brand:           var(--green-600);
+  --brand-hover:     var(--green-700);
+  --brand-active:    var(--green-800);
+  --brand-subtle:    var(--green-50);
+  --brand-subtle-hover: var(--green-100);
+  --on-brand:        var(--neutral-0);
+
+  --accent:          var(--gold-500);
+  --accent-hover:    var(--gold-600);
+  --accent-subtle:   var(--gold-50);
+  --on-accent:       var(--green-950);
+
+  /* Text */
+  --text-strong:     var(--neutral-900);
+  --text-body:       var(--neutral-800);
+  --text-muted:      var(--neutral-600);
+  --text-subtle:     var(--neutral-500);
+  --text-disabled:   var(--neutral-400);
+  --text-on-dark:    var(--neutral-50);
+  --text-brand:      var(--green-700);
+  --text-link:       var(--green-700);
+
+  /* Surfaces */
+  --surface-page:    var(--neutral-50);
+  --surface-card:    var(--neutral-0);
+  --surface-sunken:  var(--neutral-100);
+  --surface-raised:  var(--neutral-0);
+  --surface-inverse: var(--neutral-900);
+  --surface-overlay: oklch(0.205 0.007 156 / 0.55);
+  --surface-hover:   var(--neutral-100);
+
+  /* Borders */
+  --border-subtle:   var(--neutral-200);
+  --border-default:  var(--neutral-300);
+  --border-strong:   var(--neutral-400);
+  --border-brand:    var(--green-600);
+  --ring-brand:      oklch(0.612 0.140 164 / 0.35);
+
+  /* Money semantics — credit (incoming) vs debit (outgoing) */
+  --money-positive:  var(--green-700);
+  --money-negative:  var(--danger-600);
+  --money-neutral:   var(--neutral-800);
+
+  /* Status (payroll lifecycle) */
+  --status-paid:     var(--success-600);
+  --status-pending:  var(--warning-600);
+  --status-overdue:  var(--danger-600);
+  --status-draft:    var(--neutral-500);
+  --status-approved: var(--info-600);
+}

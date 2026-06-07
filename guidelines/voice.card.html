@@ -1,0 +1,30 @@
+<!-- @dsCard group="Brand" viewport="700x230" name="Voice & money format" subtitle="How Lúa writes, addresses, and formats numbers" -->
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin:0; font-family:var(--font-sans); background:var(--surface-card); padding:var(--space-6) var(--space-7); color:var(--text-body); }
+  .grid { display:grid; grid-template-columns:1fr 1fr; gap:var(--space-4) var(--space-8); }
+  .item { display:flex; gap:var(--space-3); align-items:flex-start; }
+  .mark { font-size:var(--text-md); line-height:1.3; flex-shrink:0; }
+  .yes { color:var(--success-600); }
+  .no { color:var(--danger-600); }
+  .txt { font-size:var(--text-sm); }
+  .good { color:var(--text-strong); font-weight:var(--weight-medium); }
+  .bad { color:var(--text-muted); text-decoration:line-through; }
+  .note { font-size:var(--text-xs); color:var(--text-subtle); margin-top:2px; }
+</style>
+</head>
+<body>
+  <div class="grid">
+    <div class="item"><span class="mark yes">✓</span><div class="txt"><div class="good">12.500.000 ₫</div><div class="note">Dấu chấm ngăn nghìn · hậu tố ₫</div></div></div>
+    <div class="item"><span class="mark no">✕</span><div class="txt"><div class="bad">$12,500.00</div><div class="note">Không dùng định dạng Mỹ</div></div></div>
+    <div class="item"><span class="mark yes">✓</span><div class="txt"><div class="good">Gửi yêu cầu ứng lương</div><div class="note">Sentence case · động từ rõ ràng</div></div></div>
+    <div class="item"><span class="mark no">✕</span><div class="txt"><div class="bad">GỬI YÊU CẦU ỨNG LƯƠNG</div><div class="note">Không ALL CAPS (chèn dấu)</div></div></div>
+    <div class="item"><span class="mark yes">✓</span><div class="txt"><div class="good">Bạn có thể ứng tối đa 50%.</div><div class="note">Xưng "bạn" · thân thiện</div></div></div>
+    <div class="item"><span class="mark no">✕</span><div class="txt"><div class="bad">Quý khách vui lòng…</div><div class="note">Quá cứng nhắc, xa cách</div></div></div>
+  </div>
+</body>
+</html>
