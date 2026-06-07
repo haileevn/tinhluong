@@ -2,7 +2,7 @@
 (function () {
   const DS = window.LAPayrollDesignSystem_59f88b;
   const { Icon, Avatar, IconButton, Badge, Button } = DS;
-  const { canAccess, ROLE_LABEL } = window.LuaUtils;
+  const { canAccess, ROLE_LABEL, DEV_PHONE, DEV_PHONE_TEL } = window.LuaUtils;
   const api = window.LuaAPI;
 
   const CSS = `
@@ -20,6 +20,8 @@
   .lw-navitem:hover { background: var(--surface-hover); color: var(--text-strong); }
   .lw-navitem[data-active="true"] { background: var(--brand-subtle); color: var(--text-brand); font-weight: 600; }
   .lw-side__foot { margin-top: auto; }
+  .lw-side__dev { margin-top: var(--space-3); padding-top: var(--space-3); border-top: 1px solid var(--border-subtle); font-size: var(--text-2xs); color: var(--text-subtle); text-align: center; line-height: 1.45; }
+  .lw-side__dev a { color: var(--text-muted); text-decoration: none; }
   .lw-user { display: flex; align-items: center; gap: var(--space-3); padding: var(--space-2-5); border-radius: var(--radius-md); }
   .lw-user__name { font-size: var(--text-sm); font-weight: 600; color: var(--text-strong); }
   .lw-user__role { font-size: var(--text-xs); color: var(--text-muted); }
@@ -102,6 +104,9 @@
             <Button size="sm" variant="ghost" style={{ width: '100%', marginTop: 8 }} onClick={() => { api.clearAuth(); window.dispatchEvent(new Event('lua:logout')); }}>
               Đăng xuất
             </Button>
+            <p className="lw-side__dev">
+              Dev by H2T - Hải Lê | <a href={`tel:${DEV_PHONE_TEL}`}>{DEV_PHONE}</a>
+            </p>
           </div>
         </aside>
       </>

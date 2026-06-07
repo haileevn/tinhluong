@@ -30,10 +30,15 @@
     return data;
   }
 
+  const DEV_CREDIT = 'Dev by H2T - Hải Lê | 0937.777.791';
+  const DEV_PHONE = '0937.777.791';
+  const DEV_PHONE_TEL = '0937777791';
+
   window.OmAPI = {
     get: (p) => request(p),
     post: (p, body) => request(p, { method: 'POST', body: JSON.stringify(body || {}) }),
     login: (username, password) => request('/auth/login', { method: 'POST', body: JSON.stringify({ username, password }) }),
     setAuth, clearAuth, getUser, getToken,
+    DEV_CREDIT, DEV_PHONE, DEV_PHONE_TEL,
   };
 })();

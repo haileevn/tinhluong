@@ -16,6 +16,7 @@ const exportRoutes = require('./routes/export');
 const portalRoutes = require('./routes/portal');
 const { authRequired } = require('./middleware/auth');
 
+const { DEV_CREDIT } = require('./constants');
 const PORT = process.env.PORT || 3000;
 const ROOT = path.join(__dirname, '..');
 
@@ -77,5 +78,6 @@ app.listen(PORT, () => {
   console.log(`\n🍊 Ông Mập by H2T — Payroll`);
   console.log(`   Admin:    http://localhost:${PORT}/app`);
   console.log(`   Nhân viên: http://localhost:${PORT}/mobile`);
-  console.log(`   API:      http://localhost:${PORT}/api\n`);
+  console.log(`   API:      http://localhost:${PORT}/api`);
+  console.log(`   ${DEV_CREDIT}\n`);
 });

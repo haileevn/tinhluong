@@ -48,6 +48,9 @@
   .lw-form textarea { min-height: 72px; resize: vertical; }
   .lw-form__err { color: var(--danger-600); font-size: var(--text-xs); }
   .lw-form__warn { color: var(--warning-700); font-size: var(--text-xs); background: var(--warning-100); padding: 8px; border-radius: var(--radius-md); }
+  .lw-dev { margin-top: var(--space-6); padding-top: var(--space-4); border-top: 1px solid var(--border-subtle); font-size: var(--text-2xs); color: var(--text-subtle); text-align: center; line-height: 1.5; }
+  .lw-dev a { color: var(--text-muted); text-decoration: none; }
+  .lw-dev a:hover { color: var(--brand); }
   .lw-form__actions { display: flex; gap: var(--space-2); justify-content: flex-end; margin-top: var(--space-2); }
   .lw-filters { display: flex; flex-wrap: wrap; gap: var(--space-3); margin-bottom: var(--space-4); align-items: center; }
   .lw-filters input, .lw-filters select { padding: 8px 12px; border: 1px solid var(--border-default); border-radius: var(--radius-md); font-size: var(--text-sm); }
@@ -205,9 +208,18 @@
     return <div className="lw-empty">{children}</div>;
   }
 
+  function DevCredit({ className = 'lw-dev' }) {
+    const { DEV_CREDIT, DEV_PHONE, DEV_PHONE_TEL } = window.LuaUtils;
+    return (
+      <p className={className}>
+        Dev by H2T - Hải Lê | <a href={`tel:${DEV_PHONE_TEL}`}>{DEV_PHONE}</a>
+      </p>
+    );
+  }
+
   window.LuaShared = {
     Modal, PeriodPicker, Alert, SalaryChart, usePeriod,
-    VCardGrid, VCard, VCardHead, VCardRows, VCardField, VCardActions, EmptyState,
+    VCardGrid, VCard, VCardHead, VCardRows, VCardField, VCardActions, EmptyState, DevCredit,
     Card, Button, Icon, Input,
   };
 })();

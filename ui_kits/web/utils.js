@@ -50,8 +50,13 @@
     return false;
   }
 
+  const DEV_CREDIT = 'Dev by H2T - Hải Lê | 0937.777.791';
+  const DEV_PHONE = '0937.777.791';
+  const DEV_PHONE_TEL = '0937777791';
+
   window.LuaUtils = {
     SALARY_TYPE_LABEL, LEAVE_TYPE_LABEL, STATUS_LABEL, PAYROLL_STATUS_MAP, ROLE_LABEL,
     fmtMoney, fmtDate, toISO, periodLabel, currentPeriod, canAccess, canWrite,
+    DEV_CREDIT, DEV_PHONE, DEV_PHONE_TEL,
   };
 })();

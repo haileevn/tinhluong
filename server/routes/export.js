@@ -3,6 +3,7 @@ const jwt = require('jsonwebtoken');
 const XLSX = require('xlsx');
 const PDFDocument = require('pdfkit');
 const { getDb, getSettings } = require('../db');
+const { DEV_CREDIT } = require('../constants');
 const { requirePermission, JWT_SECRET, hasPermission } = require('../middleware/auth');
 
 const router = express.Router();
@@ -101,6 +102,8 @@ router.get('/pdf/:year/:month', requirePermission('export:read'), (req, res) => 
 
   doc.moveDown();
   doc.fontSize(11).text(`Tổng chi lương: ${fmt(data.payroll.total_amount)} ₫`, { align: 'right' });
+  doc.moveDown(2);
+  doc.fontSize(8).fillColor('#888').text(DEV_CREDIT, { align: 'center' });
   doc.end();
 });
 
@@ -132,6 +135,7 @@ router.get('/payslip/:year/:month/:employeeId', authExport, (req, res) => {
   h1 { font-size: 18px; } table { width: 100%; border-collapse: collapse; margin: 16px 0; }
   td { padding: 6px 0; border-bottom: 1px solid #eee; } td:last-child { text-align: right; font-family: monospace; }
   .net { font-size: 20px; font-weight: bold; color: #1a7f4b; }
+  .dev { margin-top: 24px; padding-top: 12px; border-top: 1px solid #eee; font-size: 11px; color: #999; text-align: center; }
   @media print { body { margin: 0; } button { display: none; } }
 </style></head><body>
 <h1>${settings.company_name}</h1>
@@ -152,6 +156,7 @@ router.get('/payslip/:year/:month/:employeeId', authExport, (req, res) => {
 </table>
 <p>Trạng thái: ${item.status === 'paid' ? 'Đã trả' : item.status === 'locked' ? 'Đã chốt' : 'Chưa chốt'}</p>
 <button onclick="window.print()">In phiếu lương</button>
+<p class="dev">${DEV_CREDIT}</p>
 </body></html>`);
 });
 

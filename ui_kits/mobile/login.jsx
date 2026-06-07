@@ -3,6 +3,7 @@
   const DS = window.LAPayrollDesignSystem_59f88b;
   const { Button } = DS;
   const api = window.OmAPI;
+  const { DEV_PHONE, DEV_PHONE_TEL } = api;
 
   const CSS = `
   .om-login { min-height: 100vh; min-height: 100dvh; display: flex; flex-direction: column; justify-content: center; padding: 24px; background: var(--surface-page); }
@@ -14,6 +15,8 @@
   .om-login input { width: 100%; box-sizing: border-box; padding: 14px; border: 1.5px solid var(--border-default); border-radius: var(--radius-md); margin-top: 6px; font-size: 16px; }
   .om-login__err { color: var(--danger-600); font-size: var(--text-sm); margin-bottom: 12px; }
   .om-login__hint { font-size: var(--text-xs); color: var(--text-muted); margin-top: 20px; text-align: center; line-height: 1.6; }
+  .om-dev { margin-top: 24px; padding-top: 16px; border-top: 1px solid var(--border-subtle); font-size: 11px; color: var(--text-subtle); text-align: center; line-height: 1.5; }
+  .om-dev a { color: var(--text-muted); text-decoration: none; }
   `;
   if (!document.getElementById('om-login-styles')) {
     const s = document.createElement('style'); s.id = 'om-login-styles'; s.textContent = CSS; document.head.appendChild(s);
@@ -65,6 +68,9 @@
         <div className="om-login__hint">
           Demo: nvanan / nv123456<br />lequan / nv123456 · vulan / nv123456
         </div>
+        <p className="om-dev">
+          Dev by H2T - Hải Lê | <a href={`tel:${DEV_PHONE_TEL}`}>{DEV_PHONE}</a>
+        </p>
       </div>
     );
   }

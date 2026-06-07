@@ -2,6 +2,7 @@
   "name": "ong-map-payroll",
   "version": "1.1.0",
   "description": "Ông Mập by H2T — Hệ thống quản lý lương cho quán/doanh nghiệp nhỏ",
+  "author": "H2T - Hải Lê <0937.777.791>",
   "main": "server/index.js",
   "scripts": {
     "start": "node server/index.js",

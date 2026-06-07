@@ -351,6 +351,12 @@ Tất cả endpoint (trừ login) yêu cầu JWT trong header: `Authorization: B
 
 ---
 
+## Nhà phát triển
+
+**Dev by H2T - Hải Lê | [0937.777.791](tel:0937777791)**
+
+---
+
 ## Giấy phép
 
 Dự án mã nguồn mở — sử dụng tự do cho mục đích quản lý lương nội bộ.

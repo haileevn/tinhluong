@@ -6,6 +6,7 @@
     AdvancesScreen, BonusesScreen, PayrollScreen, HistoryScreen, SettingsScreen,
   } = window.LuaWeb;
   const { canAccess } = window.LuaUtils;
+  const { DevCredit } = window.LuaShared;
   const api = window.LuaAPI;
 
   const TITLES = {
@@ -55,7 +56,7 @@
         <Sidebar active={screen} onNavigate={setScreen} user={user} open={menuOpen} onClose={() => setMenuOpen(false)} />
         <div className="lw-main">
           <Topbar title={meta.t} subtitle={meta.s} onMenu={() => setMenuOpen(true)} />
-          <div className="lw-scroll">{body}</div>
+          <div className="lw-scroll">{body}<DevCredit /></div>
         </div>
       </div>
     );
